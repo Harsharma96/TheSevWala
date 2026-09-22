@@ -236,8 +236,9 @@
       height: 56px;
       object-fit: contain;
       border-radius: 50%;
-      border: 2.5px solid var(--accent-gold);
-      box-shadow: 0 4px 14px rgba(13, 98, 50, 0.35);
+      border: 2.5px solid #15803d;
+      outline: 2px solid #b01515;
+      box-shadow: 0 4px 14px rgba(8, 55, 26, 0.35);
       background: #ffffff;
       transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       flex-shrink: 0;
@@ -245,7 +246,9 @@
 
     .brand-logo:hover .brand-logo-img {
       transform: scale(1.06) rotate(-2deg);
-      box-shadow: 0 6px 20px rgba(13, 98, 50, 0.5);
+      box-shadow: 0 6px 20px rgba(176, 21, 21, 0.45);
+      outline-color: #15803d;
+      border-color: #b01515;
     }
 
     .brand-names {
@@ -374,9 +377,9 @@
     }
 
     .track-action-btn {
-      background: #fdf5eb;
-      border-color: #ebdccf;
-      color: var(--primary-crimson);
+      background: #ecfdf5;
+      border-color: #86efac;
+      color: #08371a;
     }
 
     .track-action-btn i {
@@ -384,13 +387,14 @@
     }
 
     .track-action-btn:hover {
-      background: linear-gradient(135deg, #b01515 0%, #7a0a0a 100%);
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
       color: #ffffff;
-      border-color: var(--accent-gold);
+      border-color: #08371a;
+      box-shadow: 0 4px 14px rgba(8, 55, 26, 0.3);
     }
 
     .track-action-btn:hover i {
-      color: #bbf7d0;
+      color: #ffffff;
     }
 
     /* eCommerce Cart Pill Button */
@@ -970,13 +974,42 @@
     .btn-gold {
       background: var(--gold-gradient);
       color: #ffffff;
-      box-shadow: 0 6px 20px rgba(13, 98, 50, 0.45);
+      box-shadow: 0 6px 20px rgba(8, 55, 26, 0.45);
+      border: 1.5px solid rgba(134, 239, 172, 0.35);
     }
 
     .btn-gold:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 26px rgba(13, 98, 50, 0.6);
+      box-shadow: 0 10px 26px rgba(8, 55, 26, 0.6);
       background: linear-gradient(135deg, #22c55e 0%, #15803d 50%, #08371a 100%);
+    }
+
+    .btn-crimson, .btn-red {
+      background: linear-gradient(135deg, #cc1e1e 0%, #b01515 50%, #7a0a0a 100%);
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(176, 21, 21, 0.45);
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-crimson:hover, .btn-red:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 26px rgba(176, 21, 21, 0.65);
+      background: linear-gradient(135deg, #e02424 0%, #cc1e1e 50%, #8b1212 100%);
+      color: #ffffff;
+    }
+
+    .btn-green {
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #08371a 100%);
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(8, 55, 26, 0.45);
+      border: 1.5px solid rgba(134, 239, 172, 0.4);
+    }
+
+    .btn-green:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 26px rgba(8, 55, 26, 0.6);
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #08371a 100%);
+      color: #ffffff;
     }
 
     .btn-outline-light {
@@ -1065,14 +1098,14 @@
        4. RUNNING MARQUEE LINE (Below Banner)
        ========================================= */
     .marquee-wrapper {
-      background: linear-gradient(90deg, #7a0a0a 0%, #b01515 50%, #7a0a0a 100%);
+      background: linear-gradient(90deg, #08371a 0%, #0e542a 50%, #08371a 100%);
       color: #ffffff;
       padding: 13px 0;
       position: relative;
       overflow: hidden;
-      border-top: 2.5px solid #15803d;
-      border-bottom: 2.5px solid #15803d;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+      border-top: 3px solid #b01515;
+      border-bottom: 3px solid #b01515;
+      box-shadow: 0 4px 20px rgba(8, 55, 26, 0.35);
     }
 
     .marquee-track {
@@ -1163,10 +1196,31 @@
       height: 96px;
       border-radius: 50%;
       padding: 4px;
-      background: linear-gradient(135deg, #b01515 0%, #15803d 60%, #08371a 100%);
-      box-shadow: 0 6px 18px rgba(116, 9, 21, 0.12);
       transition: all 0.35s ease;
       margin-bottom: 10px;
+    }
+
+    /* Alternating 50/50 Red and Green Rings */
+    .category-circle-card:nth-child(odd) .category-circle-wrapper {
+      background: linear-gradient(135deg, #cc1e1e 0%, #b01515 100%);
+      box-shadow: 0 6px 18px rgba(176, 21, 21, 0.22);
+    }
+
+    .category-circle-card:nth-child(odd) .category-badge-pill {
+      background: #08371a;
+      color: #ffffff;
+      border: 1.5px solid #86efac;
+    }
+
+    .category-circle-card:nth-child(even) .category-circle-wrapper {
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
+      box-shadow: 0 6px 18px rgba(8, 55, 26, 0.26);
+    }
+
+    .category-circle-card:nth-child(even) .category-badge-pill {
+      background: #b01515;
+      color: #ffffff;
+      border: 1.5px solid #fecaca;
     }
 
     .category-circle-img {
@@ -1184,14 +1238,12 @@
       bottom: -4px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--primary-crimson);
-      color: #fff;
       font-size: 0.65rem;
       font-weight: 800;
       padding: 2px 8px;
       border-radius: var(--radius-full);
       white-space: nowrap;
-      border: 1.5px solid #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.18);
     }
 
     .category-name {
@@ -1207,10 +1259,16 @@
       transform: translateY(-6px) scale(1.04);
     }
 
-    .category-circle-card:hover .category-circle-wrapper,
-    .category-circle-card.active .category-circle-wrapper {
-      box-shadow: 0 10px 24px rgba(13, 98, 50, 0.45);
-      background: linear-gradient(135deg, #16a34a, #15803d, #08371a);
+    .category-circle-card:nth-child(odd):hover .category-circle-wrapper,
+    .category-circle-card:nth-child(odd).active .category-circle-wrapper {
+      box-shadow: 0 10px 24px rgba(176, 21, 21, 0.45);
+      background: linear-gradient(135deg, #e02424, #b01515, #7a0a0a);
+    }
+
+    .category-circle-card:nth-child(even):hover .category-circle-wrapper,
+    .category-circle-card:nth-child(even).active .category-circle-wrapper {
+      box-shadow: 0 10px 24px rgba(8, 55, 26, 0.48);
+      background: linear-gradient(135deg, #22c55e, #16a34a, #08371a);
     }
 
     .category-circle-card:hover .category-circle-img,
@@ -1218,9 +1276,15 @@
       transform: scale(1.08);
     }
 
-    .category-circle-card:hover .category-name,
-    .category-circle-card.active .category-name {
-      color: var(--primary-crimson);
+    .category-circle-card:nth-child(odd):hover .category-name,
+    .category-circle-card:nth-child(odd).active .category-name {
+      color: #b01515;
+      font-weight: 800;
+    }
+
+    .category-circle-card:nth-child(even):hover .category-name,
+    .category-circle-card:nth-child(even).active .category-name {
+      color: #08371a;
       font-weight: 800;
     }
 
@@ -1343,7 +1407,6 @@
       position: absolute;
       top: 8px;
       left: 8px;
-      background: var(--primary-crimson);
       color: #ffffff;
       font-size: 0.62rem;
       font-weight: 800;
@@ -1352,6 +1415,37 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       text-transform: uppercase;
       letter-spacing: 0.4px;
+    }
+
+    /* Alternating 50/50 Red and Green Ribbons */
+    .product-card:nth-child(odd) .product-ribbon {
+      background: linear-gradient(135deg, #cc1e1e 0%, #b01515 100%);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .product-card:nth-child(even) .product-ribbon {
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
+      border: 1px solid rgba(134, 239, 172, 0.45);
+    }
+
+    .product-card:nth-child(odd):hover {
+      border-color: #b01515;
+    }
+
+    .product-card:nth-child(even):hover {
+      border-color: #15803d;
+    }
+
+    .product-card:nth-child(odd) .weight-chip.active {
+      background: #b01515;
+      color: #fff;
+      border-color: #b01515;
+    }
+
+    .product-card:nth-child(even) .weight-chip.active {
+      background: #08371a;
+      color: #fff;
+      border-color: #08371a;
     }
 
     @media (min-width: 768px) {
@@ -1560,11 +1654,13 @@
     .product-save-tag {
       font-size: 0.64rem;
       font-weight: 800;
-      color: #059669;
-      background: #ecfdf5;
-      padding: 1px 5px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
+      border: 1px solid rgba(134, 239, 172, 0.35);
+      padding: 2px 7px;
       border-radius: 4px;
       margin-left: auto;
+      letter-spacing: 0.3px;
     }
 
     @media (min-width: 768px) {
@@ -1587,7 +1683,7 @@
 
     .btn-add-cart {
       flex: 1;
-      background: var(--primary-crimson);
+      background: linear-gradient(135deg, #cc1e1e 0%, #b01515 50%, #8c1010 100%);
       color: #fff;
       padding: 7px 6px;
       border-radius: var(--radius-sm);
@@ -1599,6 +1695,7 @@
       gap: 5px;
       transition: all 0.25s ease;
       white-space: nowrap;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     @media (min-width: 768px) {
@@ -1611,12 +1708,13 @@
     }
 
     .btn-add-cart:hover {
-      background: var(--primary-dark);
-      box-shadow: 0 4px 12px rgba(116, 9, 21, 0.3);
+      background: linear-gradient(135deg, #e02424 0%, #b01515 50%, #680808 100%);
+      box-shadow: 0 4px 14px rgba(176, 21, 21, 0.4);
+      transform: translateY(-1px);
     }
 
     .btn-wa-buy {
-      background: #25d366;
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
       color: #fff;
       width: 34px;
       height: 33px;
@@ -1627,7 +1725,8 @@
       font-size: 1.05rem;
       transition: all 0.25s ease;
       flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+      box-shadow: 0 2px 8px rgba(8, 55, 26, 0.35);
+      border: 1px solid rgba(134, 239, 172, 0.4);
     }
 
     @media (min-width: 768px) {
@@ -1636,13 +1735,14 @@
         height: 42px;
         border-radius: var(--radius-md);
         font-size: 1.2rem;
-        box-shadow: 0 3px 10px rgba(37, 211, 102, 0.28);
+        box-shadow: 0 4px 12px rgba(8, 55, 26, 0.4);
       }
     }
 
     .btn-wa-buy:hover {
-      background: #1eb956;
+      background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
       transform: scale(1.05);
+      box-shadow: 0 4px 14px rgba(8, 55, 26, 0.5);
     }
 
     /* Products Load More & Quick View Styles */
@@ -1706,9 +1806,9 @@
     }
 
     .btn-load-more {
-      background: linear-gradient(135deg, #b01515 0%, #7a0a0a 100%);
+      background: linear-gradient(135deg, #08371a 0%, #15803d 50%, #08371a 100%);
       color: #ffffff;
-      border: 1.5px solid var(--accent-gold);
+      border: 2px solid #b01515;
       padding: 12px 28px;
       border-radius: var(--radius-full);
       font-size: 0.94rem;
@@ -1716,20 +1816,20 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 6px 20px rgba(116, 9, 21, 0.28);
+      box-shadow: 0 6px 20px rgba(8, 55, 26, 0.35);
       cursor: pointer;
       transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     .btn-load-more:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(176, 21, 21, 0.4);
-      background: linear-gradient(135deg, #cc1e1e 0%, #7a0a0a 100%);
+      box-shadow: 0 10px 26px rgba(8, 55, 26, 0.5);
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
     }
 
     .load-icon-anim {
       font-size: 1rem;
-      color: var(--accent-gold);
+      color: #86efac;
       animation: bounceDown 1.5s infinite;
     }
 
@@ -1743,13 +1843,14 @@
     }
 
     .btn-load-more-count {
-      background: #15803d;
+      background: #b01515;
       color: #ffffff;
       font-size: 0.72rem;
       font-weight: 800;
       padding: 2px 8px;
       border-radius: var(--radius-full);
       letter-spacing: 0.3px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .btn-show-less {
@@ -1865,13 +1966,13 @@
        7. OFFERS & SPECIAL PROMOTIONS SECTION (Luxury Compact Deal)
        ========================================= */
     .offers-section {
-      padding: 38px 0;
-      background: linear-gradient(135deg, #3d040a 0%, #680813 50%, #290205 100%);
+      padding: 42px 0;
+      background: linear-gradient(135deg, #041d0e 0%, #08371a 50%, #0a4621 100%);
       color: #ffffff;
       position: relative;
       overflow: hidden;
-      border-top: 2px solid rgba(34, 197, 94, 0.35);
-      border-bottom: 2px solid rgba(34, 197, 94, 0.35);
+      border-top: 3.5px solid #b01515;
+      border-bottom: 3.5px solid #b01515;
     }
 
     .offers-section::before {
@@ -1886,8 +1987,8 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 100%);
-      border: 1.5px solid rgba(34, 197, 94, 0.55);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+      border: 2px solid rgba(176, 21, 21, 0.75);
       border-radius: var(--radius-lg);
       padding: 22px 24px;
       backdrop-filter: blur(14px);
@@ -2091,7 +2192,7 @@
       align-items: center;
       justify-content: space-between;
       background: rgba(0, 0, 0, 0.45);
-      border: 1px dashed var(--accent-gold);
+      border: 1.5px dashed #b01515;
       padding: 7px 12px;
       border-radius: var(--radius-sm);
     }
@@ -2100,12 +2201,12 @@
       font-family: monospace;
       font-size: 0.95rem;
       font-weight: 800;
-      color: var(--accent-light-gold);
+      color: #fca5a5;
       letter-spacing: 1.5px;
     }
 
     .btn-compact-copy {
-      background: var(--accent-gold);
+      background: #b01515;
       color: #ffffff;
       padding: 5px 12px;
       border-radius: 4px;
@@ -2117,7 +2218,7 @@
     }
 
     .btn-compact-copy:hover {
-      background: #15803d;
+      background: #cc1e1e;
       transform: scale(1.05);
     }
 
@@ -2533,20 +2634,46 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: var(--crimson-gradient);
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
       font-size: 1.1rem;
-      border: 2px solid var(--accent-gold);
+    }
+
+    /* 50/50 Alternating Review Card Styles */
+    .review-card:nth-child(odd) .reviewer-avatar {
+      background: linear-gradient(135deg, #cc1e1e 0%, #b01515 100%);
+      border: 2px solid #15803d;
+    }
+
+    .review-card:nth-child(odd) .reviewer-info h4 {
+      color: #b01515;
+    }
+
+    .review-card:nth-child(odd):hover {
+      border-color: #b01515;
+      box-shadow: 0 10px 24px rgba(176, 21, 21, 0.15);
+    }
+
+    .review-card:nth-child(even) .reviewer-avatar {
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
+      border: 2px solid #b01515;
+    }
+
+    .review-card:nth-child(even) .reviewer-info h4 {
+      color: #08371a;
+    }
+
+    .review-card:nth-child(even):hover {
+      border-color: #15803d;
+      box-shadow: 0 10px 24px rgba(8, 55, 26, 0.18);
     }
 
     .reviewer-info h4 {
       font-size: 0.95rem;
       font-weight: 800;
-      color: var(--primary-crimson);
     }
 
     .reviewer-info p {
@@ -2606,28 +2733,60 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background: #fdf2e9;
-      color: var(--primary-crimson);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.3rem;
       flex-shrink: 0;
-      border: 1.5px solid #f3d2be;
       transition: all 0.3s ease;
+    }
+
+    /* 50/50 Alternating Feature Box Icons */
+    .feature-box:nth-child(1) .feature-icon-circle,
+    .feature-box:nth-child(3) .feature-icon-circle {
+      background: linear-gradient(135deg, #cc1e1e 0%, #b01515 100%);
+      color: #ffffff;
+      border: 1.5px solid #b01515;
+      box-shadow: 0 4px 14px rgba(176, 21, 21, 0.25);
+    }
+
+    .feature-box:nth-child(1) .feature-details h4,
+    .feature-box:nth-child(3) .feature-details h4 {
+      color: #b01515;
+    }
+
+    .feature-box:nth-child(1):hover,
+    .feature-box:nth-child(3):hover {
+      border-color: #b01515;
+      box-shadow: 0 10px 25px rgba(176, 21, 21, 0.15);
+    }
+
+    .feature-box:nth-child(2) .feature-icon-circle,
+    .feature-box:nth-child(4) .feature-icon-circle {
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
+      color: #ffffff;
+      border: 1.5px solid #16a34a;
+      box-shadow: 0 4px 14px rgba(8, 55, 26, 0.3);
+    }
+
+    .feature-box:nth-child(2) .feature-details h4,
+    .feature-box:nth-child(4) .feature-details h4 {
+      color: #08371a;
+    }
+
+    .feature-box:nth-child(2):hover,
+    .feature-box:nth-child(4):hover {
+      border-color: #15803d;
+      box-shadow: 0 10px 25px rgba(8, 55, 26, 0.18);
     }
 
     .feature-box:hover .feature-icon-circle {
       transform: scale(1.1) rotate(5deg);
-      background: var(--accent-gold);
-      color: #ffffff;
-      border-color: var(--accent-gold);
     }
 
     .feature-details h4 {
       font-size: 0.98rem;
       font-weight: 800;
-      color: var(--primary-crimson);
       margin-bottom: 4px;
     }
 
@@ -2828,8 +2987,9 @@
 
     /* Top Trust / Perks Strip */
     .footer-perks-strip {
-      background: rgba(0, 0, 0, 0.28);
-      border-bottom: 1px solid rgba(21, 128, 61, 0.3);
+      background: #08371a;
+      border-top: 3.5px solid #b01515;
+      border-bottom: 1.5px solid rgba(176, 21, 21, 0.3);
       padding: 22px 0;
     }
 
@@ -2849,14 +3009,24 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(13, 98, 50, 0.22);
-      border: 1.5px solid rgba(21, 128, 61, 0.45);
-      color: var(--accent-gold);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.25rem;
       flex-shrink: 0;
+    }
+
+    /* 50/50 Alternating Footer Perk Badges */
+    .footer-perk-item:nth-child(odd) .footer-perk-icon {
+      background: rgba(176, 21, 21, 0.25);
+      border: 1.5px solid #b01515;
+      color: #fca5a5;
+    }
+
+    .footer-perk-item:nth-child(even) .footer-perk-icon {
+      background: rgba(22, 163, 74, 0.25);
+      border: 1.5px solid #86efac;
+      color: #86efac;
     }
 
     .footer-perk-text h5 {
@@ -4475,11 +4645,11 @@
                 groundnut oil. Crispy, spicy, and irresistible.
               </p>
               <div class="hero-btns">
-                <a href="#products" class="btn btn-gold">
+                <a href="#products" class="btn btn-crimson">
                   <i class="fa-solid fa-cart-shopping"></i> Order Fresh Batch
                 </a>
                 <a href="https://wa.me/919876543210?text=I%20want%20to%20order%20Ratlami%20Sev" target="_blank"
-                  class="btn btn-outline-light">
+                  class="btn btn-green">
                   <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
                 </a>
               </div>
@@ -4504,10 +4674,10 @@
                 aroma of authentic Madhya Pradesh namkeen.
               </p>
               <div class="hero-btns">
-                <a href="#categories" class="btn btn-gold">
+                <a href="#categories" class="btn btn-green">
                   <i class="fa-solid fa-table-cells"></i> Explore All Categories
                 </a>
-                <a href="#offers" class="btn btn-outline-light">
+                <a href="#offers" class="btn btn-crimson">
                   <i class="fa-solid fa-gift"></i> View Festive Offers
                 </a>
               </div>
@@ -4532,10 +4702,10 @@
                 India. Free shipping on orders over ₹499!
               </p>
               <div class="hero-btns">
-                <a href="#products" class="btn btn-gold">
+                <a href="#products" class="btn btn-crimson">
                   <i class="fa-solid fa-fire"></i> Shop Best Sellers
                 </a>
-                <a href="#reviews" class="btn btn-outline-light">
+                <a href="#reviews" class="btn btn-green">
                   <i class="fa-solid fa-star"></i> 50,000+ Happy Customers
                 </a>
               </div>
