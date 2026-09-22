@@ -31,15 +31,15 @@
       --primary-dark: #7a0a0a;
       --primary-light: #cc1e1e;
       --accent-green: #08371a;
-      --accent-emerald: #08371a;
-      --accent-lime: #0e4c25;
+      --accent-emerald: #15803d;
+      --accent-lime: #16a34a;
       --accent-light-green: #86efac;
-      --accent-gold: #08371a;
-      --accent-amber: #0e4c25;
+      --accent-gold: #15803d;
+      --accent-amber: #16a34a;
       --accent-light-gold: #86efac;
-      --gold-gradient: linear-gradient(135deg, #0e4c25 0%, #08371a 50%, #041f0e 100%);
-      --green-gradient: linear-gradient(135deg, #0e4c25 0%, #08371a 50%, #041f0e 100%);
-      --crimson-gradient: linear-gradient(135deg, #b01515 0%, #7a0a0a 100%);
+      --gold-gradient: linear-gradient(135deg, #16a34a 0%, #0d6232 45%, #08371a 100%);
+      --green-gradient: linear-gradient(135deg, #16a34a 0%, #0d6232 45%, #08371a 100%);
+      --crimson-gradient: linear-gradient(135deg, #cc1e1e 0%, #b01515 50%, #7a0a0a 100%);
 
       --bg-warm: #faf5ee;
       --bg-cream: #fffaf0;
@@ -52,8 +52,8 @@
       --shadow-sm: 0 4px 12px rgba(176, 21, 21, 0.08);
       --shadow-md: 0 8px 24px rgba(176, 21, 21, 0.12);
       --shadow-lg: 0 16px 36px rgba(176, 21, 21, 0.18);
-      --shadow-gold: 0 8px 20px rgba(8, 55, 26, 0.38);
-      --shadow-green: 0 8px 20px rgba(8, 55, 26, 0.38);
+      --shadow-gold: 0 8px 20px rgba(13, 98, 50, 0.38);
+      --shadow-green: 0 8px 20px rgba(13, 98, 50, 0.38);
 
       --radius-sm: 8px;
       --radius-md: 14px;
@@ -123,9 +123,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #eef8f1;
+      background: #ecfdf5;
       color: #08371a;
-      border: 1px solid #b7e3c5;
+      border: 1.5px solid #86efac;
       padding: 5px 16px;
       border-radius: var(--radius-full);
       font-size: 0.82rem;
@@ -164,15 +164,15 @@
       content: '';
       width: 50px;
       height: 2px;
-      background: linear-gradient(to right, transparent, var(--accent-gold));
+      background: linear-gradient(to right, transparent, #15803d);
     }
 
     .ornament-line::after {
-      background: linear-gradient(to left, transparent, var(--accent-gold));
+      background: linear-gradient(to left, transparent, #15803d);
     }
 
     .ornament-line i {
-      color: var(--accent-gold);
+      color: #15803d;
       font-size: 0.85rem;
     }
 
@@ -201,7 +201,7 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       box-shadow: 0 6px 25px rgba(90, 10, 18, 0.12);
-      border-bottom: 1.5px solid rgba(8, 55, 26, 0.35);
+      border-bottom: 2px solid rgba(21, 128, 61, 0.4);
       padding: 7px 0;
     }
 
@@ -237,7 +237,7 @@
       object-fit: contain;
       border-radius: 50%;
       border: 2.5px solid var(--accent-gold);
-      box-shadow: 0 4px 14px rgba(8, 55, 26, 0.35);
+      box-shadow: 0 4px 14px rgba(13, 98, 50, 0.35);
       background: #ffffff;
       transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       flex-shrink: 0;
@@ -245,7 +245,7 @@
 
     .brand-logo:hover .brand-logo-img {
       transform: scale(1.06) rotate(-2deg);
-      box-shadow: 0 6px 20px rgba(8, 55, 26, 0.5);
+      box-shadow: 0 6px 20px rgba(13, 98, 50, 0.5);
     }
 
     .brand-names {
@@ -268,7 +268,7 @@
     .brand-tagline {
       font-size: 0.67rem;
       font-weight: 800;
-      color: #08371a;
+      color: #0d6232;
       letter-spacing: 1.1px;
       text-transform: uppercase;
       line-height: 1.2;
@@ -380,7 +380,7 @@
     }
 
     .track-action-btn i {
-      color: #08371a;
+      color: #15803d;
     }
 
     .track-action-btn:hover {
@@ -436,7 +436,7 @@
       position: absolute;
       top: -4px;
       right: -5px;
-      background: linear-gradient(135deg, #0e4c25 0%, #08371a 100%);
+      background: linear-gradient(135deg, #16a34a 0%, #08371a 100%);
       color: #ffffff;
       font-size: 0.68rem;
       font-weight: 800;
@@ -970,13 +970,13 @@
     .btn-gold {
       background: var(--gold-gradient);
       color: #ffffff;
-      box-shadow: 0 6px 20px rgba(8, 55, 26, 0.42);
+      box-shadow: 0 6px 20px rgba(13, 98, 50, 0.45);
     }
 
     .btn-gold:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 26px rgba(8, 55, 26, 0.58);
-      background: linear-gradient(135deg, #135d30 0%, #08371a 50%, #03170a 100%);
+      box-shadow: 0 10px 26px rgba(13, 98, 50, 0.6);
+      background: linear-gradient(135deg, #22c55e 0%, #15803d 50%, #08371a 100%);
     }
 
     .btn-outline-light {
@@ -1013,9 +1013,9 @@
     }
 
     .hero-arrow:hover {
-      background: var(--accent-gold);
+      background: #15803d;
       color: #ffffff;
-      border-color: var(--accent-gold);
+      border-color: #15803d;
     }
 
     .hero-arrow.prev {
@@ -1065,14 +1065,14 @@
        4. RUNNING MARQUEE LINE (Below Banner)
        ========================================= */
     .marquee-wrapper {
-      background: var(--primary-crimson);
+      background: linear-gradient(90deg, #7a0a0a 0%, #b01515 50%, #7a0a0a 100%);
       color: #ffffff;
       padding: 13px 0;
       position: relative;
       overflow: hidden;
-      border-top: 2px solid var(--accent-gold);
-      border-bottom: 2px solid var(--accent-gold);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+      border-top: 2.5px solid #15803d;
+      border-bottom: 2.5px solid #15803d;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
     }
 
     .marquee-track {
@@ -1163,7 +1163,7 @@
       height: 96px;
       border-radius: 50%;
       padding: 4px;
-      background: linear-gradient(135deg, #0e4c25 0%, #08371a 50%, #b01515 100%);
+      background: linear-gradient(135deg, #b01515 0%, #15803d 60%, #08371a 100%);
       box-shadow: 0 6px 18px rgba(116, 9, 21, 0.12);
       transition: all 0.35s ease;
       margin-bottom: 10px;
@@ -1209,8 +1209,8 @@
 
     .category-circle-card:hover .category-circle-wrapper,
     .category-circle-card.active .category-circle-wrapper {
-      box-shadow: 0 10px 24px rgba(8, 55, 26, 0.42);
-      background: linear-gradient(135deg, #135d30, #08371a, #03170a);
+      box-shadow: 0 10px 24px rgba(13, 98, 50, 0.45);
+      background: linear-gradient(135deg, #16a34a, #15803d, #08371a);
     }
 
     .category-circle-card:hover .category-circle-img,
@@ -1743,7 +1743,7 @@
     }
 
     .btn-load-more-count {
-      background: #08371a;
+      background: #15803d;
       color: #ffffff;
       font-size: 0.72rem;
       font-weight: 800;
@@ -1931,7 +1931,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3.5px solid var(--accent-gold);
-      box-shadow: 0 0 22px rgba(8, 55, 26, 0.45);
+      box-shadow: 0 0 22px rgba(21, 128, 61, 0.45);
     }
 
     .compact-offer-tag {
@@ -2117,7 +2117,7 @@
     }
 
     .btn-compact-copy:hover {
-      background: #08371a;
+      background: #15803d;
       transform: scale(1.05);
     }
 
@@ -2188,7 +2188,7 @@
     .reel-card:hover {
       transform: translateY(-8px) scale(1.03);
       border-color: var(--accent-gold);
-      box-shadow: 0 16px 32px rgba(8, 55, 26, 0.35);
+      box-shadow: 0 16px 32px rgba(13, 98, 50, 0.35);
     }
 
     .reel-bg-img {
@@ -2246,19 +2246,19 @@
       width: 52px;
       height: 52px;
       border-radius: 50%;
-      background: rgba(8, 55, 26, 0.92);
+      background: rgba(13, 98, 50, 0.92);
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.3rem;
-      box-shadow: 0 0 20px rgba(8, 55, 26, 0.65);
+      box-shadow: 0 0 20px rgba(21, 128, 61, 0.65);
       transition: transform 0.3s ease;
     }
 
     .reel-card:hover .reel-play-btn {
       transform: translate(-50%, -50%) scale(1.15);
-      background: #08371a;
+      background: #15803d;
     }
 
     .reel-bottom-content {
@@ -2829,7 +2829,7 @@
     /* Top Trust / Perks Strip */
     .footer-perks-strip {
       background: rgba(0, 0, 0, 0.28);
-      border-bottom: 1px solid rgba(8, 55, 26, 0.25);
+      border-bottom: 1px solid rgba(21, 128, 61, 0.3);
       padding: 22px 0;
     }
 
@@ -2849,8 +2849,8 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(8, 55, 26, 0.15);
-      border: 1px solid rgba(8, 55, 26, 0.35);
+      background: rgba(13, 98, 50, 0.22);
+      border: 1.5px solid rgba(21, 128, 61, 0.45);
       color: var(--accent-gold);
       display: flex;
       align-items: center;
@@ -2900,7 +2900,7 @@
       background: #ffffff;
       padding: 2px;
       border: 2px solid var(--accent-gold);
-      box-shadow: 0 4px 15px rgba(8, 55, 26, 0.25);
+      box-shadow: 0 4px 15px rgba(13, 98, 50, 0.3);
       flex-shrink: 0;
       object-fit: contain;
     }
@@ -2916,7 +2916,7 @@
 
     .footer-brand-tagline {
       font-size: 0.68rem;
-      color: #08371a;
+      color: #4ade80;
       font-weight: 800;
       letter-spacing: 0.9px;
       display: block;
@@ -2956,7 +2956,7 @@
       background: var(--accent-gold);
       color: #ffffff;
       transform: translateY(-3px) scale(1.08);
-      box-shadow: 0 4px 12px rgba(8, 55, 26, 0.4);
+      box-shadow: 0 4px 12px rgba(13, 98, 50, 0.45);
     }
 
     .footer-payment-strip {
@@ -3031,7 +3031,7 @@
 
     .footer-links a:hover i {
       transform: translateX(2px);
-      color: #08371a;
+      color: #4ade80;
     }
 
     /* Contact Column */
@@ -3070,7 +3070,7 @@
     }
 
     .footer-contact-item a:hover {
-      color: #08371a;
+      color: #4ade80;
     }
 
     .btn-footer-wa-direct {
@@ -3123,7 +3123,7 @@
     }
 
     .footer-cert-item .fssai-icon {
-      color: #08371a;
+      color: #4ade80;
     }
 
     /* Bottom Copyright Bar */
@@ -4374,7 +4374,7 @@
   <div class="client-modal-overlay" id="clientModalOverlay"></div>
   <div class="client-modal" id="clientModal">
     <div class="client-modal-header">
-      <h3><i class="fa-solid fa-headset" style="color: #08371a;"></i> Client Desk &amp; Track Order</h3>
+      <h3><i class="fa-solid fa-headset" style="color: #15803d;"></i> Client Desk &amp; Track Order</h3>
       <button class="client-modal-close" id="clientModalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="client-modal-body">
@@ -4392,7 +4392,7 @@
       </div>
       <div class="client-support-grid">
         <a href="tel:+919876543210" class="client-support-tile">
-          <i class="fa-solid fa-phone-volume" style="color: #08371a; font-size: 1.2rem;"></i>
+          <i class="fa-solid fa-phone-volume" style="color: #15803d; font-size: 1.2rem;"></i>
           <div>
             <div style="font-weight: 800; font-size: 0.85rem;">Call Support</div>
             <div style="font-size: 0.72rem; color: #786357;">+91 98765 43210</div>
@@ -4413,7 +4413,7 @@
   <div class="client-modal-overlay" id="quickViewOverlay"></div>
   <div class="client-modal" id="quickViewModal">
     <div class="client-modal-header">
-      <h3 style="display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-sparkles" style="color: #08371a;"></i> <span id="quickModalTitle">Namkeen Details</span></h3>
+      <h3 style="display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-sparkles" style="color: #15803d;"></i> <span id="quickModalTitle">Namkeen Details</span></h3>
       <button class="client-modal-close" id="quickModalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="client-modal-body" id="quickModalBody" style="padding: 16px;">
@@ -5735,7 +5735,7 @@
               <span class="combo-tag"><i class="fa-solid fa-check"></i> 500g Khatta Meetha</span>
             </div>
             <p class="compact-offer-desc">
-              <i class="fa-solid fa-seedling" style="color: #08371a;"></i> 100% Shuddh Groundnut Oil • Crisp &amp; Fresh • <strong>Free Pan-India Delivery!</strong>
+              <i class="fa-solid fa-seedling" style="color: #15803d;"></i> 100% Shuddh Groundnut Oil • Crisp &amp; Fresh • <strong>Free Pan-India Delivery!</strong>
             </p>
           </div>
           <div class="compact-offer-actions">
@@ -6227,7 +6227,7 @@
             style="color: var(--primary-crimson); border-color: #ebdccf; background: #fff;"
             aria-label="Previous Review"><i class="fa-solid fa-chevron-left"></i></button>
           <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-star"
-              style="color: #08371a;"></i> 4.9/5 Overall Rating Based on 50,000+ Orders</span>
+              style="color: #15803d;"></i> 4.9/5 Overall Rating Based on 50,000+ Orders</span>
           <button class="carousel-nav-btn" id="reviewsNextBtn"
             style="color: var(--primary-crimson); border-color: #ebdccf; background: #fff;" aria-label="Next Review"><i
               class="fa-solid fa-chevron-right"></i></button>
@@ -6448,7 +6448,7 @@
             <span>•</span>
             <a href="#home">Shipping &amp; Refund Policy</a>
             <span>•</span>
-            <a href="#home" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="color: #08371a;"><i class="fa-solid fa-arrow-up"></i> Top</a>
+            <a href="#home" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="color: #15803d;"><i class="fa-solid fa-arrow-up"></i> Top</a>
           </div>
         </div>
       </div>
